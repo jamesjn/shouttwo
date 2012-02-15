@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shouttwo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">ShoutTwo</a>
+      <form class="navbar-search pull-left">
+        <input type="text" class="search-query" placeholder="Search">
+      </form>
+      <ul class="nav">
+        <li class="active">
+          <a href="#">Recent</a>
+        </li>
+        <li>
+          <a href="#">Popular</a>
+        </li>
+        <li>
+          <a href="#">Liked</a>
+        </li>
+        <li>
+          <a href="#">Create Shout</a>
+        </li>
+      </ul>
+      <ul class="secondary-nav">
+        <li>
+          <span id="login_button" class="btn" >Login</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
