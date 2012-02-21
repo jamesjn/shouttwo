@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="padding-top: 10px">
   <div class="row">
     <div id="content" class="span12">
       <div>
@@ -6,7 +6,9 @@
         <div class="row">
           <div class="span12">
             <%= render "content_header" %>
-            <%= render "content" %>
+            <div id="content-box">
+              <%= render :partial => 'shout', :collection => @shouts || 'There are no shouts available.' %>
+            </div>
           </div>
         </div>
       </div>

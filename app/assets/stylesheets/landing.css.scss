@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  .container {
+    width: 1080px;
+  }
   padding-top: 40px;
   background-color: #DDDDDD;
   .hero-unit{
     height:190px;
     margin-top:10px;
     padding: 40px;
-    width: 960px;
+    width: 1080px;
     #hero-unit-remove-icon:hover{
       background-color: rgba(100,100,100,0.25) 
     }
