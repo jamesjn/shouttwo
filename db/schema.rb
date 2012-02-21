@@ -11,6 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120221174725) do
+
+  create_table "shouts", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.integer  "views",          :default => 0
+    t.integer  "favorites",      :default => 0
+    t.string   "media1_type"
+    t.string   "media1_content"
+    t.string   "media2_type"
+    t.string   "media2_content"
+    t.string   "compare_type"
+    t.string   "tags",           :default => ""
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
 
 end
