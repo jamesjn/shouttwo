@@ -2,68 +2,13 @@
   <div class="row">
     <div id="content" class="span12">
       <div>
-        <div class="hero-unit">
-          <h2>Welcome to Shout Two ! </h2>
-          <p> &nbsp;</p>
-          <img width="300px" height="200px" style="float:left;padding-top:50px;" src="assets/logo.png">
-          <p style="padding-top:0px;padding-left:340px;">
-            This is an app for shouting out media!  You can 
-            <a href="#">Create</a>
-            shouts to express yourself.  You can also 
-            <a href="#">View</a>
-            shouts to view what others have created.
-            <br/>
-            <br/>
-            <a class="btn btn-primary btn-large" href="#">Learn more ></a>
-          </p>
-        </div>
-       
+        <%= render "hero_unit" %>
         <div class="row">
           <div class="span12">
-            <div id="main-content">
-              <div class="top-bar">
-                <div class="current">
-                  <strong>Recent</strong>
-                </div>
-              </div>
-            </div>
-            <div id="content-box">
-              <div class="row" style="padding-bottom: 10px; border-bottom: 1px solid #DDDDDD">
-                <div class="span4" style="margin-left:30px">
-                  <img src="assets/mock/lin.jpg" width="300">
-                </div>
-                <div class="span1" style="margin-top:80px;font-size:100px">
-                  > 
-                </div>
-                <div class="span4" style="margin-left:10px">
-                  <img src="assets/mock/kobe.jpg" width="300">
-                </div>
-                <div class="span3" style="margin-left:5px; border-left: 1px solid #DDDDDD; height:100%">
-                  <h3>Jeremy Lin vs Kobe Bryant</h3>
-                  <div><a href="#"> James </a></div>
-                  <i class="icon-eye-open"></i>100
-                  <i class="icon-check"></i>10
-                  <br/>
-                  <br/>
-                  <a class="btn btn-large" href="#">
-                    <i class="icon-comment"></i>
-                    Comment
-                  </a>
-                  <a class="btn btn-large" href="#">
-                    <i class="icon-check"></i>
-                    Favorite
-                  </a>
-                  <br/>
-
-                  <div id="share-box" style="border-radius: 1px 1px 1px 1px; box-shadow: 0 1px 2px #AAAAAA; padding-top: 5px;"> 
-                    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.google.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21&amp;appId=152460108176191" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <%= render "content_header" %>
+            <%= render "content" %>
           </div>
         </div>
-
       </div>
     </div>
   </div>
