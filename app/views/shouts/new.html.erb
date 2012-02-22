@@ -1,0 +1,116 @@
+<div class="container" style="padding-top:20px; width: 750px;">
+  <div id="content-header">
+    <div class="top-bar" style="padding: 10px; ">
+      <div class="row">
+        <div class="span3">
+          <h1>Add a shout</h1>
+        </div>
+        <div class="span2" >
+          Type of media 1:
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button id="media1-picture-button" class="btn" data-toggle="button">
+              <i class="icon-picture"></i>
+            </button>
+            <button id="media1-video-button" class="btn">
+              <i class="icon-facetime-video"></i>
+            </button>
+            <button id="media1-text-button" class="btn">
+              <i class="icon-pencil"></i>
+            </button>
+          </div>
+        </div>
+        <div class="span2" >
+          Type of media 2:
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button id="media2-picture-button" class="btn" data-toggle="button">
+              <i class="icon-picture"></i>
+            </button>
+            <button id="media2-video-button" class="btn">
+              <i class="icon-facetime-video"></i>
+            </button>
+            <button id="media2-text-button" class="btn">
+              <i class="icon-pencil"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="content-box" style="min-height:400px" >
+    <div id="shout_form" style="padding: 10px; font-size: 20px;">
+      <%= form_for(@shout) do |shout_form| %>
+        <% if @shout.errors.any? %>
+          <div id="errorExplanation" class="alert block_message warning">
+            <a class="close" data-dismiss="alert">x</a>
+            <% @shout.errors.messages.each do |msg| %>
+              <p><%= msg[0].to_s + ": " + msg[1].join(" and ") %></p>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="row">
+          <div class="span2">
+            Shout Title
+          </div>
+          <div class="span7">
+            <%= shout_form.text_field :title, :class => "span7", :style => "height: 30px; font-size: 30px"%>
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 30px">
+          <div id="media1-label" class="span2">
+            Picture 1 URL 
+          </div>
+          <div class="span7">
+            <%= shout_form.text_field :media1_content, :class => "span7", :style => "height: 30px; font-size: 30px"%>
+            <%= shout_form.hidden_field :media1_type%>
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 30px">
+          <div id="media2-label" class="span2">
+            Picture 2 URL 
+          </div>
+          <div class="span7">
+            <%= shout_form.text_field :media2_content, :class => "span7", :style => "height: 30px; font-size: 30px"%>
+            <%= shout_form.hidden_field :media2_type%>
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 30px">
+          <div class="span2">
+            Tags 
+          </div>
+          <div class="span7">
+            <%= shout_form.text_field :tags, 
+                :class => "span7", 
+                :style => "height: 30px; font-size: 30px"%>
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 30px; padding-bottom:20px; border-bottom: 1px solid #DDDDDD;">
+          <div class="span2">
+            Compare
+          </div>
+          <div class="span7" style="font-size:40px">
+            <div class="btn-group" data-toggle="buttons-radio">
+              <%= shout_form.radio_button :compare_type, 
+                  "greater_than" %> >
+              <%= shout_form.radio_button :compare_type, 
+                  "equal", 
+                  :checked => true %> = 
+              <%= shout_form.radio_button :compare_type, 
+                  "less_than" %> <
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 20px; padding-right:10px;">
+          <span style="float:right">
+            <%= shout_form.submit "Create", :class => "btn btn-primary btn-large" %>
+          </span>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

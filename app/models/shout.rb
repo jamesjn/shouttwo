@@ -1,5 +1,7 @@
 class Shout < ActiveRecord::Base
-  validates :title, :presence => true, :length => { :maximum => 50 }
+  validates :title, 
+            :presence => true, 
+            :length => { :maximum => 50, :minimum => 1 }
   validates :user_id, :presence => true
   validates :media1_type, 
             :presence => true, 
