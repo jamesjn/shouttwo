@@ -1,12 +1,12 @@
 <div class="row" style="padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #DDDDDD">
   <div class="span4" style="margin-left:30px">
-    <img src="<%= shout.media1_content %>" width="300">
+    <%= render :partial => "landing/media", :locals => {:type => shout.media1_type, :content => shout.media1_content, :width => '300'}%>
   </div>
   <div class="span1" style="margin-top:80px;font-size:100px">
     > 
   </div>
   <div class="span4" style="margin-left:10px">
-    <img src="<%= shout.media2_content %>" width="300">
+    <%= render :partial => "landing/media", :locals => {:type => shout.media2_type, :content => shout.media2_content, :width => '300'}%>
   </div>
   <div class="span3" style="margin-left:5px">
     <div id="share-box" style="border-radius: 1px 1px 1px 1px; box-shadow: 0 1px 2px #AAAAAA; padding-top: 5px;"> 

@@ -8,11 +8,11 @@ class Shout < ActiveRecord::Base
             :inclusion => { :in => %w(video picture text)}
   validates :media1_content, 
             :presence => true,
-            :length => { :maximum => 50, :minimum => 10 }
+            :length => { :maximum => 50, :minimum => 1 }
   validates :media2_type, :presence => true,
             :presence => true, 
             :inclusion => { :in => %w(video picture text)}
   validates :media2_content, 
              :presence => true,
-            :length => { :maximum => 50, :minimum => 10 }
+            :length => { :maximum => 50, :minimum => 1 }
 end
