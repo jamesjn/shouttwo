@@ -1,4 +1,5 @@
 class ShoutsController < ApplicationController
+  include ShoutsHelper
   respond_to :html
 
   def show

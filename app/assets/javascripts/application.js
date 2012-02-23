@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//
+upload = function (file, append_to) {
+
+  if (!file || !file.type.match(/image.*/)) return;
+
+  var fd = new FormData();
+  fd.append("image", file); // Append the file
+  fd.append("key", "b1507316815a853a7a23318ff905a486");
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "http://api.imgur.com/2/upload.json");
+  xhr.onload = function() {
+    image_loc = JSON.parse(xhr.responseText).upload.links.original;
+    $(append_to).val(image_loc);
+   }
+   xhr.send(fd);
+}

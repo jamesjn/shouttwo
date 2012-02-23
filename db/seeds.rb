@@ -9,4 +9,3 @@
 jeremy_kobe_create_params = {:title => "Jeremy Lin vs Kobe Bryant", :user_id => 1, :media1_type => "picture", :media1_content => "http://www.jamesjn.com/shouttwo/assets/mock/lin.jpg", :media2_type => "picture", :media2_content => "http://www.jamesjn.com/shouttwo/assets/mock/kobe.jpg", :tags => "no tags"}
 
 Shout.create(jeremy_kobe_create_params)
-Shout.create(jeremy_kobe_create_params)

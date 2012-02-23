@@ -1,0 +1,9 @@
+one:
+  id: 1
+  title: "Jeremy Lin"
+  user_id: "1"
+  media1_type: "picture"
+  media1_content: "http://www.jamesjn.com/blah"
+  media2_type: "picture"
+  media2_content: "http://www.jamesjn.com/blah2"
+  tags: "no tags"
