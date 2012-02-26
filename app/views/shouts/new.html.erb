@@ -62,7 +62,7 @@
           </div>
           <div class="span7">
             <%= shout_form.text_field :media1_content, :class => "span7", :style => "height: 30px; font-size: 30px; margin-bottom:0px;"%>
-            <%= shout_form.hidden_field :media1_type%>
+            <%= shout_form.hidden_field :media1_type, :value => "picture"%>
             <div id="imgur_upload1" style="font-size:15px;height:15px;">
               <a onclick="$('#shout1_uploader').click()">Upload to imgur</a>
               <input id="shout1_uploader" type="file" style="display:none" onchange="upload(this.files[0], '#shout_media1_content')">
@@ -76,7 +76,7 @@
           </div>
           <div class="span7">
             <%= shout_form.text_field :media2_content, :class => "span7", :style => "height: 30px; font-size: 30px; margin-bottom:0px;"%>
-            <%= shout_form.hidden_field :media2_type%>
+            <%= shout_form.hidden_field :media2_type, :value => "picture"%>
             <div id="imgur_upload2" style="font-size:15px;height:15px;">
               <a onclick="$('#shout2_uploader').click()">Upload to imgur</a>
               <input id="shout2_uploader" type="file" style="display:none" onchange="upload(this.files[0], '#shout_media2_content')">

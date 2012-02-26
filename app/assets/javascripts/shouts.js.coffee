@@ -7,8 +7,6 @@
 $ ->
   $('.tab').button()
   $('.btn[data-toggle="button"]').button('toggle')
-  $('#shout_media1_type').attr("value", "picture")
-  $('#shout_media2_type').attr("value", "picture")
   $('#media1-picture-button').click ->
     $('#media1-label').html("Picture 1 URL")
     $('#shout_media1_type').attr("value", "picture")

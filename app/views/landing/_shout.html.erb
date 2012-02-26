@@ -3,7 +3,7 @@
     <%= render :partial => "landing/media", :locals => {:type => shout.media1_type, :content => shout.media1_content, :width => '300'}%>
   </div>
   <div class="span1" style="margin-top:80px;font-size:100px">
-    > 
+    <%= compare_type_convert(shout.compare_type)%>
   </div>
   <div class="span4" style="margin-left:10px">
     <%= render :partial => "landing/media", :locals => {:type => shout.media2_type, :content => shout.media2_content, :width => '300'}%>

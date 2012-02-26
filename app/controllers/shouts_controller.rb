@@ -1,5 +1,6 @@
 class ShoutsController < ApplicationController
   include ShoutsHelper
+  before_filter :authenticate_user!, :only => [:create, :new]
   respond_to :html
 
   def show
