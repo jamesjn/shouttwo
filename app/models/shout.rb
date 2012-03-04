@@ -13,4 +13,7 @@ class Shout < ActiveRecord::Base
   validates :media2_content, 
              :presence => true,
             :length => { :maximum => 100, :minimum => 1 }
+  belongs_to :user
+  has_many :favorite
+  delegate :username, :to => :user
 end

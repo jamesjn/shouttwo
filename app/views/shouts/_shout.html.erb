@@ -1,32 +1,15 @@
-<div class="row" style="padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #DDDDDD">
-  <div class="span4" style="margin-left:30px">
-    <%= render :partial => "shouts/media", :locals => {:type => shout.media1_type, :content => shout.media1_content, :width => '300'}%>
+<div style="border-bottom: 1px solid #DDDDDD">
+  <%= render :partial => 'shout_header', :locals => {:shout => shout} %>
+</div>
+<div class="row" data-shout="<%=shout.id %>" style="padding-top: 10px; padding-bottom</h4></div>: 10px; border-bottom: 1px solid #DDDDDD">
+  <div class="span5" style="margin-left:30px">
+    <%= render :partial => "shouts/media", :locals => {:type => shout.media1_type, :content => shout.media1_content, :width => '450'}%>
   </div>
   <div class="span1" style="margin-top:80px;font-size:100px">
     <%= compare_type_convert(shout.compare_type)%>
   </div>
-  <div class="span4" style="margin-left:10px">
-    <%= render :partial => "shouts/media", :locals => {:type => shout.media2_type, :content => shout.media2_content, :width => '300'}%>
-  </div>
-  <div class="span3" style="margin-left:5px">
-    <div id="share-box" style="border-radius: 1px 1px 1px 1px; box-shadow: 0 1px 2px #AAAAAA; padding-top: 5px;"> 
-      <h3><%= shout.title %></h3>
-      <div><a href="#"> <%= shout.user_id %></a></div>
-      <i class="icon-eye-open"></i><%= shout.views %>
-      <i class="icon-check"></i><%= shout.favorites %>
-      <br/>
-      <br/>
-      <a class="btn btn-large" href="#">
-        <i class="icon-comment"></i>
-        Comment
-      </a>
-      <a class="btn btn-large" href="#">
-        <i class="icon-check"></i>
-        Favorite
-      </a>
-      <br/>
-      <br/>
-      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.google.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21&amp;appId=152460108176191" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
-    </div>
+  <div class="span5" style="margin-left:10px">
+    <%= render :partial => "shouts/media", :locals => {:type => shout.media2_type, :content => shout.media2_content, :width => '450'}%>
   </div>
 </div>
+<%= render 'disqus' %>

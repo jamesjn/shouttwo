@@ -3,53 +3,13 @@
 <head>
   <title>Shouttwo</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", 'bootstrap-dropdown', 'bootstrap-button' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <p class="notice"><%= notice %></p>
 <p class="devise_alert"><%= alert %></p>
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/shouttwo">ShoutTwo</a>
-      <form class="navbar-search pull-left">
-        <input type="text" class="search-query" placeholder="Search">
-      </form>
-      <ul class="nav">
-        <li class="active">
-          <a href="#">Recent</a>
-        </li>
-        <li>
-          <a href="#">Popular</a>
-        </li>
-        <li>
-          <a href="#">Liked</a>
-        </li>
-        <li>
-          <a href="/shouttwo/shouts/new">Create Shout</a>
-        </li>
-      </ul>
-      <ul class="secondary-nav">
-        <li>
-          <% if @current_user %>
-<ul class="dropdown-menu">
-<li><a href="#">Action</a></li>
-<li><a href="#">Another action</a></li>
-<li><a href="#">Something else here</a></li>
-<li class="divider"></li>
-<li><a href="#">Separated link</a></li>
-</ul>
-            <span style="color: #999999"> Hello <%= @current_user.username || @current_user.email %> </span>
-          <% else %>
-            <%= link_to "Login", user_omniauth_authorize_path(:facebook), :class => "btn" %>
-          <% end %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
+<%= render 'layouts/navbar' %>
 <%= yield %>
 
 </body>
