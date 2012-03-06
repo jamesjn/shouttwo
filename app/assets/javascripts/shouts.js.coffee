@@ -32,3 +32,25 @@ $ ->
     $('#shout_media2_type').attr("value", "text")
     $("#imgur_upload2").html('')
 
+  $('#content-box').on "click", ".not-favorited", (event)->
+    self = this
+    $.post "http://www.jamesjn.com/shouttwo/favorites", {shout_id:$(this).data('shout-id')}, (result)->
+      $(self).addClass("favorited")
+      $(self).addClass("yellow")
+      $(self).removeClass("not-favorited")
+      $(self).text "favorite"
+      $(self).prepend("<i class =\"icon-heart\"></i>")
+      $(self).unbind("click")
+      
+  $('#content-box').on "click", ".favorited", (event)->
+    self = this
+    $.ajax 'http://www.jamesjn.com/shouttwo/favorites/'+$(this).data('shout-id'), 
+      type: 'DELETE' 
+      success: (result)->
+        $(self).addClass("not-favorited")
+        $(self).removeClass("favorited")
+        $(self).removeClass("yellow")
+        $(self).text "favorite"
+        $(self).prepend("<i class =\"icon-check\"></i>")
+        $(self).unbind("click")
+

@@ -2,12 +2,9 @@
   <div class="row">
     <div id="content" class="span12">
       <div>
-        <% unless @user %>
-          <%= render "hero_unit" %>
-        <% end %>
         <div class="row">
           <div class="span12">
-            <%= render "content_header" %>
+            <h1>My Favorites</h1>
             <div id="content-box">
               <%= render :partial => 'shouts/shout_list', :collection => @shouts, :as => :shout || 'There are no shouts available.' %>
             </div>

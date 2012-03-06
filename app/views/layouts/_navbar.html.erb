@@ -27,9 +27,11 @@
               <span style="color: #999999"> Hello <%= @current_user.username || @current_user.email %> </span>
               <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Favorites</a></li>
-                <li><a href="#">Shouts</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="http://www.jamesjn.com/shouttwo/favorites">Favorites</a></li>
+                <li><a href="#">My Shouts</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
               </ul>
             </li>
           <% else %>

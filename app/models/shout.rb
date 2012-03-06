@@ -1,4 +1,5 @@
 class Shout < ActiveRecord::Base
+  attr_accessible :title, :user_id, :media1_content, :media2_content, :media1_type, :media2_type, :compare_type, :tags
   validates :title, 
             :presence => true, 
             :length => { :maximum => 50, :minimum => 1 }
@@ -14,6 +15,6 @@ class Shout < ActiveRecord::Base
              :presence => true,
             :length => { :maximum => 100, :minimum => 1 }
   belongs_to :user
-  has_many :favorite
+  has_many :favorites
   delegate :username, :to => :user
 end

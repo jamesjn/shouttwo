@@ -6,6 +6,16 @@ class ShoutsController < ApplicationController
 
   def show
     @shout = Shout.find(params[:id])
+    view = View.where(:session_id => request.session_options[:id], :shout_id => params[:id])
+    if view.empty?
+      View.create!(:session_id => request.session_options[:id], :shout_id => params[:id])
+      @shout.increment!(:views)
+     end 
+    if current_user
+      @favorite_shout_ids = current_user.favorites.collect(&:shout_id)
+    else
+      @favorite_shout_ids = nil
+    end
   end
 
   def create

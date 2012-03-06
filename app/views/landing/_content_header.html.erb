@@ -1,7 +1,13 @@
 <div id="content-header">
   <div class="top-bar">
-    <div class="current">
-      <strong>Recent</strong>
-    </div>
+    <ul class="nav nav-tabs">
+      <li <%= 'class=active' unless @sort == "views" %>>
+      <a href="/shouttwo?sort=recent">Recent</a>
+      </li>
+      <li <%= 'class=active' if @sort == "views" %>>
+        <a href="/shouttwo?sort=views">
+        Views 
+      </li>
+    </ul>
   </div>
 </div>

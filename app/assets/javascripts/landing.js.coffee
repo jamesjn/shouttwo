@@ -6,7 +6,6 @@ $("#hero-unit-remove-icon").live "click", (event) ->
   $(".hero-unit").hide()
 
 $(".art-clickable").live "click", (event) ->
-  console.log this
-  window.location.href = "shouttwo/shouts/" + $(this).data("shout")
+  window.location.href = "http://www.jamesjn.com/shouttwo/shouts/" + $(this).data("shout")
 
 $('.dropdown-toggle').dropdown()

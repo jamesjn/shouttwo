@@ -2,12 +2,21 @@
 <div>
   <h4> 
     @<%=shout.username || ''%> |
-    <i class="icon-eye-open"></i><%= shout.views %> 
-    <i class="icon-check"></i><%= shout.favorites %>
+    <i class="icon-eye-open"></i><%= shout.views %>
+    <i class="icon-heart"></i><%= shout.num_favorites %>
   </h4>
-  <a class="btn btn-large" href="#">
-    <i class="icon-check"></i>
-    Favorite
-  </a>
+  <% if @favorite_shout_ids %>
+    <% if @favorite_shout_ids.include?(shout.id) %>
+      <a data-shout-id="<%=shout.id%>" class="btn btn-large favorited yellow">
+        <i class="icon-heart"></i>
+        Favorite
+      </a>
+    <% else %>
+      <a data-shout-id="<%=shout.id%>" class="btn btn-large not-favorited">
+        <i class="icon-check"></i>
+        Favorite
+      </a>
+    <% end %>
+  <% end %>
 </div>
   <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.google.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21&amp;appId=152460108176191" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>

@@ -30,11 +30,8 @@ body {
     background-color: #F4F4F4;
     border-radius: 5px 5px 0 0;
     box-shadow: 0 1px #FFFFFF inset;
-    height: 45px;
+    height: 35px;
     overflow: hidden;
-    .current{
-      padding: 12px 22px 12px 20px;
-    }
   }
 }
 
@@ -46,5 +43,9 @@ body {
   padding-top: 20px;
 }
 
+.yellow{
+  background-color: yellow;
+  background-image: none;
+}
 
 
