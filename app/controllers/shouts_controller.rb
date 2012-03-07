@@ -33,6 +33,11 @@ class ShoutsController < ApplicationController
   def edit
   end
 
+  def mine
+    @shouts = current_user.shouts
+    @mine = true
+  end
+
   private
 
   def check_username

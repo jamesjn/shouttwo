@@ -3,6 +3,8 @@ class LandingController < ApplicationController
     @sort = params[:sort]
     if @sort == "views"
       @shouts = Shout.limit(5).order("views desc")
+    elsif @sort == "favorites"
+      @shouts = Shout.limit(5).order("num_favorites desc") 
     else
       @shouts = Shout.limit(5).order("created_at desc")
     end

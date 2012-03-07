@@ -1,7 +1,7 @@
 <div style="border-bottom: 1px solid #DDDDDD">
   <%= render :partial => 'shout_header', :locals => {:shout => shout} %>
 </div>
-<div class="row" data-shout="<%=shout.id %>" style="padding-top: 10px; padding-bottom</h4></div>: 10px; border-bottom: 1px solid #DDDDDD">
+<div class="row" data-shout="<%=shout.id %>" style="min-height: 200px;padding-top: 10px; padding-bottom</h4></div>: 10px; border-bottom: 1px solid #DDDDDD">
   <div class="span5" style="margin-left:30px">
     <%= render :partial => "shouts/media", :locals => {:type => shout.media1_type, :content => shout.media1_content, :width => '450'}%>
   </div>

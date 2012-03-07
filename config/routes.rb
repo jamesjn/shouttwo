@@ -3,6 +3,8 @@ Shouttwo::Application.routes.draw do
 
   resources :favorites
   resource :settings
-  resources :shouts
+  match "/shouts/mine" => "shouts#mine"
+  resources :shouts do
+  end
   root :to => 'landing#index'
 end

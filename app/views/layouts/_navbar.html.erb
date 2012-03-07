@@ -7,13 +7,13 @@
       </form>
       <ul class="nav">
         <li class="active">
-          <a href="#">Recent</a>
+          <a href="http://www.jamesjn.com/shouttwo?sort=recent">Recent</a>
         </li>
         <li>
-          <a href="#">Popular</a>
+          <a href="http://www.jamesjn.com/shouttwo?sort=views">Popular</a>
         </li>
         <li>
-          <a href="#">Liked</a>
+          <a href="http://www.jamesjn.com/shouttwo?sort=favorites">Liked</a>
         </li>
         <li>
           <a href="/shouttwo/shouts/new">Create Shout</a>
@@ -28,10 +28,10 @@
               <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="http://www.jamesjn.com/shouttwo/favorites">Favorites</a></li>
-                <li><a href="#">My Shouts</a></li>
-                <li><a href="#">My Profile</a></li>
+                <li><a href="http://www.jamesjn.com/shouttwo/shouts/mine">My Shouts</a></li>
+                <li><a href="http://www.jamesjn.com/shouttwo/settings/edit">My Profile</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Logout</a></li>
+                <li> <%= link_to "Log out", destroy_user_session_path, :method => :delete %> <li>
               </ul>
             </li>
           <% else %>
