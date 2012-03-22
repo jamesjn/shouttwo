@@ -2,7 +2,7 @@
 <div>
   <h4> 
     @<%=shout.username || ''%> |
-    <i class="icon-eye-open"></i><%= shout.views %>
+    <i class="icon-eye-open"></i><%= shout.views_count %>
     <i class="icon-heart"></i><%= shout.num_favorites %>
   </h4>
   <% if @favorite_shout_ids %>

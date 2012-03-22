@@ -4,6 +4,7 @@ Shouttwo::Application.routes.draw do
   resources :favorites
   resource :settings
   match "/shouts/mine" => "shouts#mine"
+  match "/search/:query" => "landing#search"
   resources :shouts do
   end
   root :to => 'landing#index'

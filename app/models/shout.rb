@@ -17,4 +17,14 @@ class Shout < ActiveRecord::Base
   belongs_to :user
   has_many :favorites
   delegate :username, :to => :user
+  has_many :views
+
+  define_index do
+    indexes title
+    indexes media1_content
+    indexes media2_content
+
+    has user_id, created_at, updated_at
+  end
+
 end
